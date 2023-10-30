@@ -19,7 +19,7 @@ connectDatabase()
     app.log.error("db connection failed", error);
   });
 
-app.get("/todo/:id", todoController.findByIdTodo);
+app.get("/todo/:id", todoController.findTodoById);
 app.get("/todo", todoController.findAllTodos);
 app.post("/todos", todoController.createTodo);
 app.delete("/todo/:id", todoController.deleteTodo);

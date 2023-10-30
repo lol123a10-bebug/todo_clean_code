@@ -6,13 +6,13 @@ interface CreateTodoInput {
   description: string;
 }
 
-export class CreateTodo {
-  constructor(private todoRepository: TodoRepository) {}
+export class Create {
+  constructor(private repository: TodoRepository) {}
 
   async executre(input: CreateTodoInput): Promise<Todo> {
     const { title, description } = input;
     const todo = new Todo(title, description);
-    await this.todoRepository.add(todo);
+    await this.repository.add(todo);
     return todo;
   }
 }

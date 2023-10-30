@@ -1,9 +1,9 @@
 import { TodoRepository } from "core/repositories";
 
-export class FindByIdTodo {
-  constructor(private todoRepository: TodoRepository) {}
+export class FindById {
+  constructor(private repository: TodoRepository) {}
   async execute(id: string) {
-    const todo = await this.todoRepository.findById(id);
+    const todo = await this.repository.findById(id);
 
     if (!todo) {
       throw Error("Wrong id");
