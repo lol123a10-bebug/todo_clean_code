@@ -1,6 +1,6 @@
+import { Todo } from "core/domain/entities";
+import { TodoRepository } from "core/repositories";
 import { EntityRepository, Repository } from "typeorm";
-import { TodoRepository } from "../../core/repositories";
-import { Todo } from "../../core/domain/entities";
 
 @EntityRepository(Todo)
 export class TodoRepositoryImpl
@@ -12,7 +12,9 @@ export class TodoRepositoryImpl
   }
 
   async findById(id: string): Promise<Todo | null> {
-    return this.findOne({ where: { id } });
+    const todo = await this.findOne({ where: { id } });
+
+    return todo || null;
   }
 
   async findAll(): Promise<Todo[]> {

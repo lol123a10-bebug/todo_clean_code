@@ -1,6 +1,6 @@
 import { FastifyReply, FastifyRequest } from "fastify";
-import { TodoRepositoryImpl } from "../../../infrastructure/repositories/todo-repository-impl";
-import { CreateTodo } from "../../../core/domain/use-cases";
+import { TodoRepositoryImpl } from "../../infrastructure/repositories/todo-repository-impl";
+import { CreateTodo } from "../../core/domain/use-cases";
 
 const todoRepository = new TodoRepositoryImpl();
 

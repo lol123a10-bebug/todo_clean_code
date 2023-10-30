@@ -1,4 +1,4 @@
-import { Todo } from "../domain/entities";
+import { Todo } from "core/domain/entities";
 
 export interface TodoRepository {
   add(todo: Todo): Promise<void>;

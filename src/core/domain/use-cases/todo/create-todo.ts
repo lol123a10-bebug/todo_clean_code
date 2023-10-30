@@ -1,5 +1,5 @@
-import { TodoRepository } from "../../../repositories";
-import { Todo } from "../../entities";
+import { Todo } from "core/domain/entities";
+import { TodoRepository } from "core/repositories";
 
 interface CreateTodoInput {
   title: string;
