@@ -1,1 +1,1 @@
-export * as todoController from "./todo-controller";
+export * as todoController from "./todo.controller";
