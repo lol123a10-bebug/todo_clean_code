@@ -7,6 +7,26 @@ const todoRepository = new TodoRepositoryImpl();
 
 type TodoFn = (req: FastifyRequest, res: FastifyReply) => Promise<void>;
 
+// class TodoController {
+//   private findById: todoUsecases.FindById;
+//   private create: todoUsecases.Create;
+//   private delete: todoUsecases.Delete;
+//   private update: todoUsecases.Update;
+//   private findAll: todoUsecases.FindAll;
+
+//   constructor() {
+//     this.findById = new todoUsecases.FindById(todoRepository);
+//     this.create = new todoUsecases.Create(todoRepository);
+//     this.delete = new todoUsecases.Delete(todoRepository);
+//     this.update = new todoUsecases.Update(todoRepository);
+//     this.findAll = new todoUsecases.FindAll(todoRepository);
+//   }
+
+//   findTodoById: TodoFn = async () => {
+
+//   }
+// }
+
 export const findTodoById: TodoFn = async (req, res) => {
   try {
     const { id } = req.params as { id: string };
