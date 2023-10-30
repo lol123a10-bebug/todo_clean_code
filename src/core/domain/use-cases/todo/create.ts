@@ -9,7 +9,7 @@ interface CreateTodoInput {
 export class Create {
   constructor(private repository: TodoRepository) {}
 
-  async executre(input: CreateTodoInput): Promise<Todo> {
+  async execute(input: CreateTodoInput): Promise<Todo> {
     const { title, description } = input;
     const todo = new Todo(title, description);
     await this.repository.add(todo);

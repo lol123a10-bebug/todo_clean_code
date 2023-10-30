@@ -39,7 +39,7 @@ export const createTodo: TodoFn = async (req, res): Promise<void> => {
   try {
     const { title, description } = req.body as any;
     const createTodo = new todoUsecases.Create(todoRepository);
-    const newTodo = await createTodo.executre({ title, description });
+    const newTodo = await createTodo.execute({ title, description });
 
     res.status(201).send({
       success: true,
