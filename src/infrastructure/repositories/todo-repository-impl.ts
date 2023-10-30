@@ -1,5 +1,5 @@
 import { EntityRepository, Repository } from "typeorm";
-import { TodoRepository } from "../../core/repositories/todo-repository";
+import { TodoRepository } from "../../core/repositories";
 import { Todo } from "../../core/domain/entities";
 
 @EntityRepository(Todo)

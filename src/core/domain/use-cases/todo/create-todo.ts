@@ -1,4 +1,4 @@
-import { TodoRepository } from "../../../repositories/todo-repository";
+import { TodoRepository } from "../../../repositories";
 import { Todo } from "../../entities";
 
 interface CreateTodoInput {
