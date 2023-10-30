@@ -1,1 +1,1 @@
-export * from './todo'
+export * as todoUsecases from "./todo";

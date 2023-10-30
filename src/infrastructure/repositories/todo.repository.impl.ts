@@ -21,10 +21,12 @@ export class TodoRepositoryImpl
     return this.find();
   }
 
+  // @ts-ignore
   async update(todo: Todo): Promise<void> {
     await this.save(todo);
   }
 
+  // @ts-ignore
   async delete(id: string): Promise<void> {
     await this.delete(id);
   }

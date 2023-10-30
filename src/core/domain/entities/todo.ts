@@ -7,7 +7,7 @@ export class Todo {
   updatedAt: Date;
 
   constructor(public title: string, public description: string) {
-    this.id = this.generateId();
+    this.id = Todo.generateId();
     this.completed = false;
     this.createdAt = new Date();
     this.updatedAt = new Date();
@@ -18,7 +18,7 @@ export class Todo {
     this.updatedAt = new Date();
   }
 
-  private generateId() {
+  static generateId() {
     return uuid();
   }
 }
