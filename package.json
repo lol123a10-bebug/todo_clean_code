@@ -17,9 +17,15 @@
   },
   "homepage": "https://github.com/lol123a10-bebug/todo_clean_code#readme",
   "dependencies": {
+    "@fastify/cors": "^8.4.1",
+    "@fastify/helmet": "^11.1.1",
+    "class-validator": "^0.14.0",
+    "fastify": "^4.24.3",
+    "typeorm": "0.2.45",
     "uuid": "^9.0.1"
   },
   "devDependencies": {
+    "@types/node": "^20.8.9",
     "@types/uuid": "^9.0.6"
   }
 }
